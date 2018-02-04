@@ -62,46 +62,36 @@ section {
   height: 60%;
 }
   #project-list {
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;
+    transform: translate(-3em, 3em);
   }
+    #project-list p {
+      position: relative;
+    }
     #project-list .project-text {
-      width: 72%;
+      width: 12em;
       position: absolute;
+      text-align: center;
       opacity: 0;
-      transition: opacity .75s;
-      /* display: block;
-      float: right; */
+      transition: opacity .5s;
+      transform: translate(-15em, 0);
+      z-index: -1;
     }
     #project-list .project-image {
-      width: 20%;
-      margin: 0.25em;
+      width: 12em;
       opacity: 1;
-      transition: opacity .1s;
-      vertical-align: middle;
-      /* display: block;
-      float: left; */
+      transition: opacity .3s;
+      z-index: 3;
     }
     #project-list .project-title {
       padding-right: 2em;
       font-size: 1.25em;
-      color: #2e373d;
-      text-decoration: none;
     }
     #project-list a:hover img {
       opacity: 0.25;
     }
     #project-list a:hover + .project-text {
       opacity: 1;
-    }
-    #project-list .award-text {
-      width: 78%;
-      position: absolute;
-      opacity: 0;
-      transition: opacity .75s;
-      vertical-align: middle;
-      /* display: block;
-      float: right; */
     }
     #project-list .award-title {
       padding-top: 5em;
@@ -110,9 +100,6 @@ section {
       color: #2e373d;
       text-decoration: none;
       vertical-align: middle;
-    }
-    #project-list a:hover + .award-text {
-      opacity: 1;
     }
 
     /* #awards {

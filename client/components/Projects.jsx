@@ -11,25 +11,31 @@ export default class Projects extends Component {
       {/* <img className="projects-arrow" src="images/down_arrow.png" /> */}
         <section id="project-list">
           <p>
-            <a className="project-title" href="https://coquill-e559a.firebaseapp.com/"><img className="project-image" src="images/burnt_quill.png" /><b>coquill ></b></a>  
+            <a className="project-title" href="https://coquill-e559a.firebaseapp.com/"><img className="project-image" src="images/burnt_quill.png" /></a>  
             <text className="project-text">
-            <br></br><br></br>
+            <br /><br />
+            <b>COQUILL</b><br />
+            <b>_______</b><br />
             A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.
             </text>
           </p>
 
           <p>
-            <a className="project-title" href="https://thefinalmeltdown.glitch.me"><img className="project-image" src="images/finalmeltdown.png" /><b>final meltdown ></b></a>
+            <a className="project-title" href="https://thefinalmeltdown.glitch.me"><img className="project-image" src="images/finalmeltdown.png" /></a>
             <text className="project-text">
-            <br></br><br></br>
+            <br /><br />
+            <b>FINAL MELTDOWN</b><br />
+            <b>______</b><br />
             A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.
             </text>
           </p>
           
           <p>
-            <a className="award-title"><img className="project-image" src="images/award.png" /><b>awards ></b></a>
-            <text className="award-text">
+            <a className="project-title"><img className="project-image" src="images/award.png" /></a>
+            <text className="project-text">
               <br /><br />
+              <b>AWARDS</b><br />
+              <b>_______</b><br />
               <b>Red Hat Best Open Source Project</b>
               <br />
               <i>SheHacks Boston</i>
