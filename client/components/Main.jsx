@@ -10,7 +10,6 @@ function Main () {
   return (
     <Router>
       <div>
-      <h1>UNDER CONSTRUCTION 2</h1>
         <Sidebar />
         <page>
         <Switch>

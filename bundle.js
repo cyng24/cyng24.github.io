@@ -25874,17 +25874,24 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'a',
               { className: 'project-title', href: 'https://coquill-e559a.firebaseapp.com/' },
-              _react2.default.createElement('img', { className: 'project-image', src: 'images/burnt_quill.png' }),
-              _react2.default.createElement(
-                'b',
-                null,
-                'coquill >'
-              )
+              _react2.default.createElement('img', { className: 'project-image', src: 'images/burnt_quill.png' })
             ),
             _react2.default.createElement(
               'text',
               { className: 'project-text' },
               _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'b',
+                null,
+                'COQUILL'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'b',
+                null,
+                '_______'
+              ),
               _react2.default.createElement('br', null),
               'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.'
             )
@@ -25895,17 +25902,24 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'a',
               { className: 'project-title', href: 'https://thefinalmeltdown.glitch.me' },
-              _react2.default.createElement('img', { className: 'project-image', src: 'images/finalmeltdown.png' }),
-              _react2.default.createElement(
-                'b',
-                null,
-                'final meltdown >'
-              )
+              _react2.default.createElement('img', { className: 'project-image', src: 'images/finalmeltdown.png' })
             ),
             _react2.default.createElement(
               'text',
               { className: 'project-text' },
               _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'b',
+                null,
+                'FINAL MELTDOWN'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'b',
+                null,
+                '______'
+              ),
               _react2.default.createElement('br', null),
               'A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.'
             )
@@ -25915,18 +25929,25 @@ var Projects = function (_Component) {
             null,
             _react2.default.createElement(
               'a',
-              { className: 'award-title' },
-              _react2.default.createElement('img', { className: 'project-image', src: 'images/award.png' }),
-              _react2.default.createElement(
-                'b',
-                null,
-                'awards >'
-              )
+              { className: 'project-title' },
+              _react2.default.createElement('img', { className: 'project-image', src: 'images/award.png' })
             ),
             _react2.default.createElement(
               'text',
-              { className: 'award-text' },
+              { className: 'project-text' },
               _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'b',
+                null,
+                'AWARDS'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'b',
+                null,
+                '_______'
+              ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'b',
