@@ -25792,6 +25792,14 @@ var About = function (_Component) {
         _react2.default.createElement(
           'p',
           null,
+          _react2.default.createElement('img', { className: 'about-image', src: 'images/marfa.png' }),
+          _react2.default.createElement('img', { className: 'about-image2', src: 'images/marfa.png' }),
+          _react2.default.createElement('img', { className: 'about-image3', src: 'images/marfa.png' }),
+          _react2.default.createElement('img', { className: 'about-image4', src: 'images/marfa.png' })
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
           'I\'m a designer and developer with a background in architecture and programming. I am always seeking projects that merge all of my skills, creating immersive products that incorporate spatial design and digital media.'
         ),
         _react2.default.createElement(
@@ -25805,12 +25813,12 @@ var About = function (_Component) {
           _react2.default.createElement(
             'a',
             { href: 'https://www.github.com/cyng24' },
-            _react2.default.createElement('img', { src: 'images/github.png' })
+            _react2.default.createElement('img', { className: 'link-image', src: 'images/github.png' })
           ),
           _react2.default.createElement(
             'a',
             { href: 'https://www.linkedin.com/in/cyng24' },
-            _react2.default.createElement('img', { src: 'images/linkedin.png' })
+            _react2.default.createElement('img', { className: 'link-image', src: 'images/linkedin.png' })
           )
         )
       );
@@ -25869,96 +25877,128 @@ var Projects = function (_Component) {
           'section',
           { id: 'project-list' },
           _react2.default.createElement(
-            'p',
-            null,
+            'div',
+            { id: 'flex' },
             _react2.default.createElement(
-              'a',
-              { className: 'project-title', href: 'https://coquill-e559a.firebaseapp.com/' },
-              _react2.default.createElement('img', { className: 'project-image', src: 'images/burnt_quill.png' })
+              'p',
+              null,
+              _react2.default.createElement(
+                'a',
+                { className: 'project-title', href: 'https://coquill-e559a.firebaseapp.com/' },
+                _react2.default.createElement('img', { className: 'project-image', src: 'images/burnt_quill.png' })
+              ),
+              _react2.default.createElement(
+                'text',
+                { className: 'project-text' },
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'COQUILL'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  '_______'
+                ),
+                _react2.default.createElement('br', null),
+                'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.'
+              )
             ),
             _react2.default.createElement(
-              'text',
-              { className: 'project-text' },
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              'p',
+              null,
               _react2.default.createElement(
-                'b',
-                null,
-                'COQUILL'
+                'a',
+                { className: 'project-title', href: 'https://thefinalmeltdown.glitch.me' },
+                _react2.default.createElement('img', { className: 'project-image', src: 'images/finalmeltdown.png' })
               ),
-              _react2.default.createElement('br', null),
               _react2.default.createElement(
-                'b',
-                null,
-                '_______'
-              ),
-              _react2.default.createElement('br', null),
-              'A web-based tool for screenwriters to collaborate in real time on a document that automatically formats into a screenplay.'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'a',
-              { className: 'project-title', href: 'https://thefinalmeltdown.glitch.me' },
-              _react2.default.createElement('img', { className: 'project-image', src: 'images/finalmeltdown.png' })
+                'text',
+                { className: 'project-text' },
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'FINAL MELTDOWN'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  '______'
+                ),
+                _react2.default.createElement('br', null),
+                'A virtual reality app that depicts the effects of climate change by placing the viewer in a melting icescape.'
+              )
             ),
             _react2.default.createElement(
-              'text',
-              { className: 'project-text' },
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              'p',
+              null,
               _react2.default.createElement(
-                'b',
-                null,
-                'FINAL MELTDOWN'
+                'a',
+                { className: 'project-title', href: 'https://youtube.com/watch?v=Y9MLgQTFiHk' },
+                _react2.default.createElement('img', { className: 'project-image', src: 'images/butterfly.png' })
               ),
-              _react2.default.createElement('br', null),
               _react2.default.createElement(
-                'b',
-                null,
-                '______'
-              ),
-              _react2.default.createElement('br', null),
-              'A virtual reality application that depict the effects of climate change on the Arctic Circle by placing the viewer in a melting icescape.'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'a',
-              { className: 'project-title' },
-              _react2.default.createElement('img', { className: 'project-image', src: 'images/award.png' })
+                'text',
+                { className: 'project-text' },
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'BUTTERFLY HUNT'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  '_______'
+                ),
+                _react2.default.createElement('br', null),
+                'A mobile augmented reality game where Grace Hopper students search for butterflies that appear on the the GH logo.'
+              )
             ),
             _react2.default.createElement(
-              'text',
-              { className: 'project-text' },
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
+              'p',
+              null,
               _react2.default.createElement(
-                'b',
-                null,
-                'AWARDS'
+                'a',
+                { className: 'project-title' },
+                _react2.default.createElement('img', { className: 'project-image', src: 'images/award.png' })
               ),
-              _react2.default.createElement('br', null),
               _react2.default.createElement(
-                'b',
-                null,
-                '_______'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'b',
-                null,
-                'Red Hat Best Open Source Project'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'i',
-                null,
-                'SheHacks Boston'
+                'text',
+                { className: 'project-text' },
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'AWARDS'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  '_______'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'b',
+                  null,
+                  'Red Hat Best Open Source Project'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'i',
+                  null,
+                  'SheHacks Boston'
+                )
               )
             )
           )

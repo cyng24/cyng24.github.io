@@ -27,18 +27,37 @@ sidebar {
   }
 
 page {
-  width: 50%;
-  transform: translate(-20em, 6em);
-  /* display: inline-flex;
-  flex-direction: column; */
+  width: 55%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
   font-family: Courier New, Courier, monospace;
-  float: right;
 }
 
-about img {
+about p {
+  margin-left: 10%;
+  transform: translateY(-2em);
+}
+about .about-image {
+  width: 6em;
+} 
+      about .about-image2 {
+        width: 6em;
+        transform: rotate(45deg);
+      } 
+      about .about-image3 {
+        width: 6em;
+        transform: rotate(90deg);
+      } 
+      about .about-image4 {
+        width: 6em;
+        transform: rotate(135deg);
+      } 
+about .link-image {
   width: 1.5em;
   padding-right: 1em;
-  padding-top: 2em;
 }
 
 home {
@@ -53,32 +72,28 @@ home {
     transform: translate(-50%, -50%);
   }
 
-  projects img {
-    width: 1.5em;
+  #project-list > div {
+    flex-wrap: wrap;
   }
-
-section {
-  width: 100%;
-  height: 60%;
-}
-  #project-list {
+  #flex {
     display: flex;
-    transform: translate(-3em, 3em);
   }
     #project-list p {
       position: relative;
+      flex-basis: calc(100% / 4);
     }
     #project-list .project-text {
-      width: 12em;
+      width: 10em;
+      font-size: 1em;
       position: absolute;
       text-align: center;
       opacity: 0;
       transition: opacity .5s;
-      transform: translate(-15em, 0);
+      transform: translate(-12em, -2em);
       z-index: -1;
     }
     #project-list .project-image {
-      width: 12em;
+      width: 8em;
       opacity: 1;
       transition: opacity .3s;
       z-index: 3;
@@ -93,18 +108,6 @@ section {
     #project-list a:hover + .project-text {
       opacity: 1;
     }
-    #project-list .award-title {
-      padding-top: 5em;
-      padding-right: 2em;
-      font-size: 1.25em;
-      color: #2e373d;
-      text-decoration: none;
-      vertical-align: middle;
-    }
-
-    /* #awards {
-      display: none;
-    } */
 
 resume img {
   width: 100%;
