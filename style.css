@@ -27,7 +27,7 @@ sidebar {
   }
 
 page {
-  width: 55%;
+  width: 58%;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -80,33 +80,34 @@ home {
   }
     #project-list p {
       position: relative;
-      flex-basis: calc(100% / 4);
+      flex-basis: calc(100% / 5);
     }
-    #project-list .project-text {
-      width: 10em;
-      font-size: 1em;
+    #project-list .project-name {
+      width: 90%;
+      font-size: 95%;
       position: absolute;
       text-align: center;
-      opacity: 0;
-      transition: opacity .5s;
-      transform: translate(-12em, -2em);
+      transition: opacity .2s; 
+      transform: translate(-110%, 150%);
       z-index: -1;
     }
-    #project-list .project-image {
-      width: 8em;
-      opacity: 1;
-      transition: opacity .3s;
+    #project-list input {
+      width: 100%;
+      transition: opacity .4s;
       z-index: 3;
     }
-    #project-list .project-title {
-      padding-right: 2em;
-      font-size: 1.25em;
+    #project-list .project-text {
+      width: 95%;
+      position: absolute;
+      transition: opacity .6s;
+      transform: translate(2em, 0em);
     }
-    #project-list a:hover img {
-      opacity: 0.25;
-    }
-    #project-list a:hover + .project-text {
-      opacity: 1;
+    #project-list .button {
+      color: black;
+      background-color: #d7dde2;
+      border: double;
+      border-width: thin;
+      font-family: Courier New, Courier, monospace;
     }
 
 resume img {
