@@ -25,6 +25,7 @@
 
 body {
   background-color: #d7dde2;
+  font-family: Courier New, Courier, monospace;
 }
 
 sidebar {
@@ -47,18 +48,16 @@ sidebar {
   }
   sidebar #link {
     color: #2e373d;
-    font-family: Courier New, Courier, monospace;
     text-decoration: none;
   }
 
 page {
-  width: 58%;
+  width: 65%;
   position: absolute;
   top: 30%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0%);
-  font-family: Courier New, Courier, monospace;
 }
 
 about p {
@@ -85,17 +84,7 @@ about p {
     padding-right: 1em;
   }
 
-home {
-  text-align: center;
-  position: relative;
-  }
-  home h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
+
 
 #project-list > div {
     flex-wrap: wrap;
@@ -131,14 +120,48 @@ home {
       transform: translate(2em, 0em);
     }
     #project-list .button {
-      color: black;
-      background-color: #d7dde2;
+      font-family: Axis-Typeface;
       border: double;
       border-width: thin;
-      font-family: Axis-Typeface;
+      color: black;
+      background-color: #d7dde2;
     }
 
 resume img {
   width: 100%;
   margin-bottom: 6em;
 }
+
+#christinalinks {
+  color: #2e373d;
+  text-decoration: overline;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  }
+  #design-list {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  #christina-list {
+    text-align: center;
+  }
+  img.christina-item {
+    position: absolute;
+    height: 100%;
+  }
+
+.box {
+  margin: 0.5%;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  padding-bottom: 45%;
+  transition: width 1s;
+}
+
+/* photography .link-image {
+    width: 1.5em;
+    display: block;
+    margin: 2em auto;
+  } */

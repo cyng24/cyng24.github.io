@@ -432,48 +432,6 @@ module.exports = invariant;
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -530,6 +488,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}
+
+/**
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
 
 /***/ }),
 /* 7 */
@@ -865,7 +865,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(6);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1703,7 +1703,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(6);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -3377,7 +3377,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(7),n=__webpack_require__(11),p=__webpack_require__(5),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(7),n=__webpack_require__(11),p=__webpack_require__(6),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -3417,7 +3417,7 @@ var _assign = __webpack_require__(7);
 var emptyObject = __webpack_require__(11);
 var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(6);
 var checkPropTypes = __webpack_require__(14);
 
 // TODO: this is special because it gets imported during build.
@@ -4819,7 +4819,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(24),B=__webpack_require__(7),C=__webpack_require__(5),ba=__webpack_require__(25),da=__webpack_require__(26),ea=__webpack_require__(27),fa=__webpack_require__(28),ia=__webpack_require__(29),D=__webpack_require__(11);
+var aa=__webpack_require__(0),l=__webpack_require__(24),B=__webpack_require__(7),C=__webpack_require__(6),ba=__webpack_require__(25),da=__webpack_require__(26),ea=__webpack_require__(27),fa=__webpack_require__(28),ia=__webpack_require__(29),D=__webpack_require__(11);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -5121,7 +5121,7 @@ var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
 var ExecutionEnvironment = __webpack_require__(24);
 var _assign = __webpack_require__(7);
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(6);
 var EventListener = __webpack_require__(25);
 var getActiveElement = __webpack_require__(26);
 var shallowEqual = __webpack_require__(27);
@@ -20771,7 +20771,7 @@ function createProvider() {
 
 
 
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(6);
 var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
 var assign = __webpack_require__(7);
@@ -21321,7 +21321,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(5);
+var emptyFunction = __webpack_require__(6);
 var invariant = __webpack_require__(8);
 var ReactPropTypesSecret = __webpack_require__(15);
 
@@ -22496,7 +22496,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(6);
+var _reactRouterDom = __webpack_require__(5);
 
 var _Sidebar = __webpack_require__(113);
 
@@ -22518,6 +22518,26 @@ var _Resume = __webpack_require__(117);
 
 var _Resume2 = _interopRequireDefault(_Resume);
 
+var _Christina = __webpack_require__(118);
+
+var _Christina2 = _interopRequireDefault(_Christina);
+
+var _Graphics = __webpack_require__(119);
+
+var _Graphics2 = _interopRequireDefault(_Graphics);
+
+var _Photography = __webpack_require__(120);
+
+var _Photography2 = _interopRequireDefault(_Photography);
+
+var _Architecture = __webpack_require__(121);
+
+var _Architecture2 = _interopRequireDefault(_Architecture);
+
+var _Filmstage = __webpack_require__(122);
+
+var _Filmstage2 = _interopRequireDefault(_Filmstage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main() {
@@ -22537,7 +22557,12 @@ function Main() {
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects', component: _Projects2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/resume', component: _Resume2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/resume', component: _Resume2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina', component: _Christina2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-architect', component: _Architecture2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-setdesigner', component: _Filmstage2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-graphicdesigner', component: _Graphics2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/christina/the-photographer', component: _Photography2.default })
         )
       )
     )
@@ -25522,7 +25547,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(6);
+var _reactRouterDom = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25575,6 +25600,11 @@ var Sidebar = function (_Component) {
           _reactRouterDom.Link,
           { id: 'link', to: '/resume' },
           'resume'
+        ),
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { id: 'link', to: '/christina' },
+          'designs'
         )
       );
     }
@@ -25602,7 +25632,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(6);
+var _reactRouterDom = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25658,7 +25688,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(6);
+var _reactRouterDom = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25741,7 +25771,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(6);
+var _reactRouterDom = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25761,9 +25791,9 @@ var Projects = function (_Component) {
   }
 
   _createClass(Projects, [{
-    key: 'coquillClick',
-    value: function coquillClick() {
-      var myImg = document.getElementsByClassName('coquill');
+    key: 'click',
+    value: function click(focus, others) {
+      var myImg = document.getElementsByClassName(focus);
       for (var i = 0; i < myImg.length; i++) {
         var displaySetting = myImg[i].style.opacity;
         if (displaySetting == "0") {
@@ -25779,150 +25809,10 @@ var Projects = function (_Component) {
           myImg[i].style.opacity = 1;
         }
       }
-      var otherImg = [document.getElementsByClassName('meltdown')];
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
       }
-    }
-  }, {
-    key: 'meltdownClick',
-    value: function meltdownClick() {
-      var myImg = document.getElementsByClassName('meltdown');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'deepClick',
-    value: function deepClick() {
-      var myImg = document.getElementsByClassName('deep');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('meltdown'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'butterflyClick',
-    value: function butterflyClick() {
-      var myImg = document.getElementsByClassName('butterfly');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('meltdown'));
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('award'));
-      for (var i = 0; i < otherImg.length; i++) {
-        for (var j = 0; j < otherImg[i].length; j++) {
-          var displaySetting = otherImg[i][j].style.opacity;
-          if (displaySetting == "0.9") {
-            otherImg[i][j].style.opacity = 0;otherImg[i][j].style.zIndex = -1;
-          }
-          if (displaySetting == "0.2") {
-            otherImg[i][j].style.opacity = 1;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'awardClick',
-    value: function awardClick() {
-      var myImg = document.getElementsByClassName('award');
-      for (var i = 0; i < myImg.length; i++) {
-        var displaySetting = myImg[i].style.opacity;
-        if (displaySetting == "0") {
-          myImg[i].style.opacity = 0.9;myImg[i].style.zIndex = 3;
-        }
-        if (displaySetting == "1") {
-          myImg[i].style.opacity = 0.2;
-        }
-        if (displaySetting == "0.9") {
-          myImg[i].style.opacity = 0;myImg[i].style.zIndex = -1;
-        }
-        if (displaySetting == "0.2") {
-          myImg[i].style.opacity = 1;
-        }
-      }
-      var otherImg = [document.getElementsByClassName('coquill')];
-      otherImg.push(document.getElementsByClassName('meltdown'));
-      otherImg.push(document.getElementsByClassName('deep'));
-      otherImg.push(document.getElementsByClassName('butterfly'));
       for (var i = 0; i < otherImg.length; i++) {
         for (var j = 0; j < otherImg[i].length; j++) {
           var displaySetting = otherImg[i][j].style.opacity;
@@ -25938,6 +25828,8 @@ var Projects = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'projects',
         null,
@@ -25950,7 +25842,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', 'class': 'project-image coquill', src: 'images/burnt_quill.png', style: { opacity: 1 }, onClick: this.coquillClick }),
+              _react2.default.createElement('input', { type: 'image', 'class': 'project-image coquill', src: 'images/burnt_quill.png', style: { opacity: 1 }, focus: "coquill", others: ['meltdown', 'deep', 'butterfly', 'award'], onClick: function onClick() {
+                  return _this2.click("coquill", ['meltdown', 'deep', 'butterfly', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { 'class': 'project-name coquill', style: { opacity: 0 } },
@@ -25964,7 +25858,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image meltdown', src: 'images/finalmeltdown.png', style: { opacity: 1 }, onClick: this.meltdownClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image meltdown', src: 'images/finalmeltdown.png', style: { opacity: 1 }, focus: "meltdown", others: ['coquill', 'deep', 'butterfly', 'award'], onClick: function onClick() {
+                  return _this2.click("meltdown", ['coquill', 'deep', 'butterfly', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name meltdown', style: { opacity: 0 } },
@@ -25978,7 +25874,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image deep', src: 'images/whale.png', style: { opacity: 1 }, onClick: this.deepClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image deep', src: 'images/whale.png', style: { opacity: 1 }, focus: "deep", others: ['coquill', 'meltdown', 'butterfly', 'award'], onClick: function onClick() {
+                  return _this2.click("deep", ['coquill', 'meltdown', 'butterfly', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name deep', style: { opacity: 0 } },
@@ -25992,7 +25890,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image butterfly', src: 'images/butterfly.png', style: { opacity: 1 }, onClick: this.butterflyClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image butterfly', src: 'images/butterfly.png', style: { opacity: 1 }, focus: "butterfly", others: ['coquill', 'meltdown', 'deep', 'award'], onClick: function onClick() {
+                  return _this2.click("butterfly", ['coquill', 'meltdown', 'deep', 'award']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name butterfly', style: { opacity: 0 } },
@@ -26006,7 +25906,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'p',
               null,
-              _react2.default.createElement('input', { type: 'image', className: 'project-image award', src: 'images/award.png', style: { opacity: 1 }, onClick: this.awardClick }),
+              _react2.default.createElement('input', { type: 'image', className: 'project-image award', src: 'images/award.png', style: { opacity: 1 }, focus: "award", others: ['coquill', 'meltdown', 'butterfly', 'deep'], onClick: function onClick() {
+                  return _this2.click("award", ['coquill', 'meltdown', 'butterfly', 'deep']);
+                } }),
               _react2.default.createElement(
                 'text',
                 { className: 'project-name award', style: { opacity: 0 } },
@@ -26077,6 +25979,9 @@ var Projects = function (_Component) {
               'p',
               { 'class': 'project-text deep', style: { opacity: 0, zIndex: -1 } },
               'A data visualization of ocean currents to plot and predict the most likely path of plastics that end up in the North Pacific Garbage Patch.',
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              'I attended Hack the Deep, the American Museum of Natural History\'s yearly hackathon, where I assisted a research professor of oceanography with his work in ocean physics and marine biology. ',
               _react2.default.createElement('br', null),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
@@ -26162,7 +26067,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(6);
+var _reactRouterDom = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26196,6 +26101,671 @@ var Resume = function (_Component) {
 }(_react.Component);
 
 exports.default = Resume;
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Christina = function (_Component) {
+  _inherits(Christina, _Component);
+
+  function Christina() {
+    _classCallCheck(this, Christina);
+
+    return _possibleConstructorReturn(this, (Christina.__proto__ || Object.getPrototypeOf(Christina)).apply(this, arguments));
+  }
+
+  _createClass(Christina, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'christina',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Christina;
+}(_react.Component);
+
+exports.default = Christina;
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Graphics = function (_Component) {
+  _inherits(Graphics, _Component);
+
+  function Graphics() {
+    _classCallCheck(this, Graphics);
+
+    return _possibleConstructorReturn(this, (Graphics.__proto__ || Object.getPrototypeOf(Graphics)).apply(this, arguments));
+  }
+
+  _createClass(Graphics, [{
+    key: 'click',
+    value: function click(focus, others, expandSize) {
+      var myImg = document.getElementsByClassName(focus);
+      for (var i = 0; i < myImg.length; i++) {
+        var displaySetting = myImg[i].style.width;
+        if (displaySetting == "22px") {
+          myImg[i].style.width = expandSize;
+        }
+        if (displaySetting == expandSize) {
+          myImg[i].style.width = "22px";
+        }
+      }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
+      for (var i = 0; i < otherImg.length; i++) {
+        for (var j = 0; j < otherImg[i].length; j++) {
+          var displaySetting = otherImg[i][j].style.width;
+          if (displaySetting != "22px") {
+            otherImg[i][j].style.width = "22px";
+          }
+        }
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'graphics',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'christina-list' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical whale', style: { width: 22 }, focus: "whale", others: ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "245px", onClick: function onClick() {
+                return _this2.click("whale", ['lib', 'evidence', 'ashes', 'fiji', 'tonga'], "245px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/junk_whale.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical lib', style: { width: 22 }, focus: "lib", others: ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], expandSize: "355px", onClick: function onClick() {
+                return _this2.click("lib", ['whale', 'evidence', 'ashes', 'fiji', 'tonga'], "355px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/lib_elec.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical evidence', style: { width: 22 }, focus: "evidence", others: ['whale', 'lib', 'ashes', 'fiji', 'tonga'], expandSize: "240px", onClick: function onClick() {
+                return _this2.click("evidence", ['whale', 'lib', 'ashes', 'fiji', 'tonga'], "240px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/evidence.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box horizontal ashes', style: { width: 22 }, focus: "ashes", others: ['whale', 'lib', 'evidence', 'fiji', 'tonga'], expandSize: "507px", onClick: function onClick() {
+                return _this2.click("ashes", ['whale', 'lib', 'evidence', 'fiji', 'tonga'], "507px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/ashes.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical fiji', style: { width: 22 }, focus: "fiji", others: ['whale', 'lib', 'evidence', 'ashes', 'tonga'], expandSize: "250px", onClick: function onClick() {
+                return _this2.click("fiji", ['whale', 'lib', 'evidence', 'ashes', 'tonga'], "250px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/fiji.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical tonga', style: { width: 22 }, focus: "tonga", others: ['whale', 'lib', 'evidence', 'ashes', 'fiji'], expandSize: "250px", onClick: function onClick() {
+                return _this2.click("tonga", ['whale', 'lib', 'evidence', 'ashes', 'fiji'], "250px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'graphics/tonga.jpg' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Graphics;
+}(_react.Component);
+
+exports.default = Graphics;
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Photography = function (_Component) {
+  _inherits(Photography, _Component);
+
+  function Photography() {
+    _classCallCheck(this, Photography);
+
+    return _possibleConstructorReturn(this, (Photography.__proto__ || Object.getPrototypeOf(Photography)).apply(this, arguments));
+  }
+
+  _createClass(Photography, [{
+    key: 'click',
+    value: function click(focus, others, expandSize) {
+      var myImg = document.getElementsByClassName(focus);
+      for (var i = 0; i < myImg.length; i++) {
+        var displaySetting = myImg[i].style.width;
+        if (displaySetting == "19px") {
+          myImg[i].style.width = expandSize;
+        }
+        if (displaySetting == expandSize) {
+          myImg[i].style.width = "19px";
+        }
+      }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
+      for (var i = 0; i < otherImg.length; i++) {
+        for (var j = 0; j < otherImg[i].length; j++) {
+          var displaySetting = otherImg[i][j].style.width;
+          if (displaySetting != "19px") {
+            otherImg[i][j].style.width = "19px";
+          }
+        }
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'photography',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'christina-list' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical NY1', style: { width: 19 }, focus: 'NY1', others: ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "285px", onClick: function onClick() {
+                return _this2.click('NY1', ['NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "285px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical NY2', style: { width: 19 }, focus: 'NY2', others: ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "285px", onClick: function onClick() {
+                return _this2.click('NY2', ['NY1', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "285px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical NY3', style: { width: 19 }, focus: 'NY3', others: ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "370px", onClick: function onClick() {
+                return _this2.click('NY3', ['NY1', 'NY2', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "370px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-3.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box vertical NY4', style: { width: 19 }, focus: 'NY4', others: ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "370px", onClick: function onClick() {
+                return _this2.click('NY4', ['NY1', 'NY2', 'NY3', 'NY5', 'CH1', 'CH2', 'BA1', 'CP1'], "370px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-4.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box horizontal NY5', style: { width: 19 }, focus: 'NY5', others: ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], expandSize: "500px", onClick: function onClick() {
+                return _this2.click('NY5', ['NY1', 'NY2', 'NY3', 'NY4', 'CH1', 'CH2', 'BA1', 'CP1'], "500px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/NY-5.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box horizontal CH1', style: { width: 19 }, focus: 'CH1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], expandSize: "565px", onClick: function onClick() {
+                return _this2.click('CH1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH2', 'BA1', 'CP1'], "565px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box horizontal CH2', style: { width: 19 }, focus: 'CH2', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], expandSize: "565px", onClick: function onClick() {
+                return _this2.click('CH2', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'BA1', 'CP1'], "565px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CH-2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box horizontal BA1', style: { width: 19 }, focus: 'BA1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], expandSize: "470px", onClick: function onClick() {
+                return _this2.click('BA1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'CP1'], "470px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/BA-1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box horizontal CP1', style: { width: 19 }, focus: 'CP1', others: ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], expandSize: "550px", onClick: function onClick() {
+                return _this2.click('CP1', ['NY1', 'NY2', 'NY3', 'NY4', 'NY5', 'CH1', 'CH2', 'BA1'], "550px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'photos/CP-1.jpg' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Photography;
+}(_react.Component);
+
+exports.default = Photography;
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Architecture = function (_Component) {
+  _inherits(Architecture, _Component);
+
+  function Architecture() {
+    _classCallCheck(this, Architecture);
+
+    return _possibleConstructorReturn(this, (Architecture.__proto__ || Object.getPrototypeOf(Architecture)).apply(this, arguments));
+  }
+
+  _createClass(Architecture, [{
+    key: 'click',
+    value: function click(focus, others, expandSizeLeft, expandSizeRight) {
+      var myImg = document.getElementsByClassName(focus);
+      if (myImg[0].style.width == "12px") {
+        myImg[0].style.width = expandSizeLeft;
+      } else {
+        myImg[0].style.width = "12px";
+      }
+      if (myImg[1].style.width == "12px") {
+        myImg[1].style.width = expandSizeRight;
+      } else {
+        myImg[1].style.width = "12px";
+      }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
+      for (var i = 0; i < otherImg.length; i++) {
+        for (var j = 0; j < otherImg[i].length; j++) {
+          var displaySetting = otherImg[i][j].style.width;
+          if (displaySetting != "12px") {
+            otherImg[i][j].style.width = "12px";
+          }
+        }
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'graphics',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'christina-list' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 34H', style: { width: 12 }, focus: "34H", others: ['41G', '860B'], expandSizeLeft: "420px", expandSizeRight: "150px", onClick: function onClick() {
+                return _this2.click("34H", ['41G', '860B'], "420px", "150px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/34H1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 34H', style: { width: 12 }, focus: "34H2", others: ['41G', '860B'], expandSizeLeft: "420px", expandSizeRight: "150px", onClick: function onClick() {
+                return _this2.click("34H", ['41G', '860B'], "420px", "150px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/34H2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 41G', style: { width: 12 }, focus: "41G", others: ['34H', '860B'], expandSizeLeft: "365px", expandSizeRight: "355px", onClick: function onClick() {
+                return _this2.click("41G", ['34H', '860B'], "365px", "355px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/41G1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 41G', style: { width: 12 }, focus: "41G", others: ['34H', '860B'], expandSizeLeft: "365px", expandSizeRight: "355px", onClick: function onClick() {
+                return _this2.click("41G", ['34H', '860B'], "365px", "355px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/41G2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 860B', style: { width: 12 }, focus: "860B", others: ['34H', '41G'], expandSizeLeft: "255px", expandSizeRight: "255px", onClick: function onClick() {
+                return _this2.click("860B", ['34H', '41G'], "255px", "255px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/860B1.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box 860B', style: { width: 12 }, focus: "860B", others: ['34H', '41G'], expandSizeLeft: "255px", expandSizeRight: "255px", onClick: function onClick() {
+                return _this2.click("860B", ['34H', '41G'], "255px", "255px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'drawings/860B2.jpg' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Architecture;
+}(_react.Component);
+
+exports.default = Architecture;
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Filmstage = function (_Component) {
+  _inherits(Filmstage, _Component);
+
+  function Filmstage() {
+    _classCallCheck(this, Filmstage);
+
+    return _possibleConstructorReturn(this, (Filmstage.__proto__ || Object.getPrototypeOf(Filmstage)).apply(this, arguments));
+  }
+
+  _createClass(Filmstage, [{
+    key: 'click',
+    value: function click(focus, others, expandSize) {
+      var myImg = document.getElementsByClassName(focus);
+      for (var i = 0; i < myImg.length; i++) {
+        var displaySetting = myImg[i].style.width;
+        if (displaySetting == "15px") {
+          myImg[i].style.width = expandSize;
+        }
+        if (displaySetting == expandSize) {
+          myImg[i].style.width = "15px";
+        }
+      }
+      var otherImg = [];
+      for (var i = 0; i < others.length; i++) {
+        otherImg.push(document.getElementsByClassName(others[i]));
+      }
+      for (var i = 0; i < otherImg.length; i++) {
+        for (var j = 0; j < otherImg[i].length; j++) {
+          var displaySetting = otherImg[i][j].style.width;
+          if (displaySetting != "15px") {
+            otherImg[i][j].style.width = "15px";
+          }
+        }
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'graphics',
+        null,
+        _react2.default.createElement(
+          'section',
+          { id: 'design-list' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-photographer' },
+            'photography'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-graphicdesigner' },
+            'graphics'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-architect' },
+            'architecture'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { id: 'christinalinks', to: '/christina/the-setdesigner' },
+            'film and stage'
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { id: 'christina-list' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box frida', style: { width: 15 }, focus: "frida", others: ['cuckoo'], expandSize: "665px", onClick: function onClick() {
+                return _this2.click("frida", ['cuckoo'], "665px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/frida2.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'box cuckoo', style: { width: 15 }, focus: "cuckoo", others: ['frida'], expandSize: "735px", onClick: function onClick() {
+                return _this2.click("cuckoo", ['frida'], "735px");
+              } },
+            _react2.default.createElement('img', { 'class': 'christina-item', src: 'stages/cuckoo1.jpg' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Filmstage;
+}(_react.Component);
+
+exports.default = Filmstage;
 
 /***/ })
 /******/ ]);
